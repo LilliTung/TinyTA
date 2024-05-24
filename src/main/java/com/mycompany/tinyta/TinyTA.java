@@ -9,18 +9,19 @@ public class TinyTA {
     {
         Scanner input = new Scanner(System.in);
         int numStudents;
-        //String temp;
+        String temp; 
+        ArrayList<String> reports = new ArrayList<String>();
         
         System.out.println("How many students are in this group?");
         numStudents = input.nextInt();
-        String[] reports = new String[numStudents];
         
-        //for(int i=0; i<numStudents; i++)
-        //{
+        for(int i=0; i<=numStudents; i++)
+        {
             //temp = input.nextLine();
             System.out.println("input report (1 PARAGRAPH ONLY):");
-            reports[1] = input.nextLine();
-        //}
+            temp = input.nextLine();
+            reports.add(i,temp);
+        }
         System.out.println(reports.toString());
         
         
