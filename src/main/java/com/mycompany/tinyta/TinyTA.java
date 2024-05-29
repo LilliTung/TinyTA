@@ -35,7 +35,6 @@ public class TinyTA {
         System.out.println(firstName.toString());
         System.out.println(lastName.toString());
         
-        
     }
     
 }

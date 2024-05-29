@@ -11,6 +11,21 @@ public class Report {
     // matching ArrayLists to hold corresponding words and sentiment values
     private static double reportSentiment;
     
-    //Scanner input = new Scanner(new File())
+    static{
+    try {
+      Scanner input = new Scanner(new File("cleanSentiment.csv"));
+      while(input.hasNextLine()){
+        String[] temp = input.nextLine().split(",");
+        words.add(temp[0]);
+        value.add(Double.parseDouble(temp[1]));
+        System.out.println(words);
+        System.out.println(value);
+      }
+      input.close();
+    }
+    catch(Exception e){
+      System.out.println("Error reading or parsing cleanSentiment.csv");
+    }
+  
     
 }
