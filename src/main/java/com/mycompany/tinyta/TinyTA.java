@@ -10,6 +10,7 @@ public class TinyTA {
         Scanner input = new Scanner(System.in);
         int numStudents;
         ArrayList<String> reports = new ArrayList<String>();
+        ArrayList<Double> overallSentiment = new ArrayList<Double>();
         ArrayList<String> firstName = new ArrayList<String>();
         ArrayList<String> lastName = new ArrayList<String>();
         String temp; 
@@ -23,6 +24,7 @@ public class TinyTA {
             System.out.println("input report (1 PARAGRAPH ONLY):");
             temp = input.nextLine();
             reports.add(i,temp);
+            overallSentiment.add(i,Report.totalSentiment(temp));
             // get and store report
             System.out.println("\nWho was this report about?");
             firstName.add(i,Student.getFirstName());
@@ -34,6 +36,7 @@ public class TinyTA {
         System.out.println(reports.toString());
         System.out.println(firstName.toString());
         System.out.println(lastName.toString());
+        System.out.println(overallSentiment.toString());
         
     }
     
