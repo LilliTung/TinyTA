@@ -15,20 +15,20 @@ public class Report {
     {
         try 
         {
-          Scanner input = new Scanner(new File("sentiments.csv"));
-            while(input.hasNextLine())
+          Scanner file = new Scanner(new File("sentiments .txt"));
+            while(file.hasNextLine())
             {
-              String[] temp = input.nextLine().split(",");
+              String[] temp = file.nextLine().split(",");
               words.add(temp[0]);
               value.add(Double.parseDouble(temp[1]));
               System.out.println(words);
               System.out.println(value);
             }
-          input.close();
+          file.close();
         }
         catch(Exception e)
         {
-          System.out.println("Error reading or parsing csv file");
+          System.out.println("Error reading file");
         }
     }  
     

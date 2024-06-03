@@ -1,4 +1,4 @@
-undermined, -0.8
+﻿undermined, -0.8
 sabotaged, -0.9
 underperformed, -0.7
 disrupted, -0.7
