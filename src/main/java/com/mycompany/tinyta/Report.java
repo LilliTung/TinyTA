@@ -2,8 +2,8 @@ package com.mycompany.tinyta;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.io.*;
-import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
 
 public class Report {
     private static ArrayList<String> words = new ArrayList<String>();
@@ -13,24 +13,27 @@ public class Report {
     
     static
     {
-        try 
+        try
         {
-          Scanner file = new Scanner(new File("sentiments .txt"));
-            while(file.hasNextLine())
-            {
-              String[] temp = file.nextLine().split(",");
-              words.add(temp[0]);
-              value.add(Double.parseDouble(temp[1]));
-              System.out.println(words);
-              System.out.println(value);
-            }
-          file.close();
+           String path = "C:\\Users\\LiTun0640\\Documents\\TinyTA1\\TinyTA\\src\\main\\java\\com\\mycompany\\sentiments.txt";
+    
+           FileReader fileReader = new FileReader(path);
+           BufferedReader bufferedReader = new BufferedReader(fileReader);
+           String line;
+
+           while((line = bufferedReader.readLine())!= null)
+           {
+               String[] temp = line.split(",");
+               words.add(temp[0]);
+               value.add(Double.parseDouble(temp[1]));
+           }
+         bufferedReader.close(); 
         }
-        catch(Exception e)
+        catch (Exception e)
         {
-          System.out.println("Error reading file");
+          System.out.println("Error reading file");   
         }
-    }  
+    }   
     
     public static double sentimentVal(String word)
     {
