@@ -17,20 +17,28 @@ public class TinyTA {
         
         System.out.println("How many students are in this group?");
         numStudents = input.nextInt();
+        numStudents = (int) (numStudents*(numStudents-1));
         input.nextLine(); //clear scanner
         
         for(int i=0; i<numStudents; i++)
         {
+            System.out.println("Person Evaluating: ");
+            System.out.println("First name: ");
+            input.next();
+            System.out.println("Last name: ");
+            input.next();
+            System.out.println("Person Being Evaluated: ");
+            firstName.add(i,Student.getFirstName());
+            // get and store student first name
+            lastName.add(i,Student.getLastName());
+            // get and store student last name
+            input.nextLine();
+            // clear scanner
             System.out.println("input report (1 PARAGRAPH ONLY):");
             temp = input.nextLine();
             reports.add(i,temp);
             overallSentiment.add(i,Report.totalSentiment(temp));
             // get and store report
-            System.out.println("\nWho was this report about?");
-            firstName.add(i,Student.getFirstName());
-            // get and store student first name
-            lastName.add(i,Student.getLastName());
-            // get and store student last name
             System.out.println();
         }
         System.out.println(reports.toString());

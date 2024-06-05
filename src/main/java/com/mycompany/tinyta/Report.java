@@ -49,6 +49,7 @@ public class Report {
     
     public static double totalSentiment(String report)
     {
+      reportSentiment = 0;
       String[] words = report.split(" ");
       for(String w : words)
       {

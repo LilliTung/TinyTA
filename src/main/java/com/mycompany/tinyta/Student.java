@@ -22,4 +22,9 @@ public class Student
         lastName = input.next();
         return lastName;
     }
+//    
+//    public static double addStudentSentiment()
+//    {
+//        
+//    }
 }
