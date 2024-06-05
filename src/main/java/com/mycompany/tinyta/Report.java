@@ -15,7 +15,7 @@ public class Report {
     {
         try
         {
-           String path = "C:\\Users\\LiTun0640\\Documents\\TinyTA1\\TinyTA\\src\\main\\java\\com\\mycompany\\sentiments.txt";
+           String path = "sentiments.txt";
     
            FileReader fileReader = new FileReader(path);
            BufferedReader bufferedReader = new BufferedReader(fileReader);
