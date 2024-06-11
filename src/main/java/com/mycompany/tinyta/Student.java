@@ -1,6 +1,7 @@
 package com.mycompany.tinyta;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Student 
 {
@@ -22,9 +23,18 @@ public class Student
         lastName = input.next();
         return lastName;
     }
-//    
-//    public static double addStudentSentiment()
-//    {
-//        
-//    }
+    
+    public static double addStudentSentiment(ArrayList<String>firstNames, 
+            ArrayList<String>lastNames, ArrayList<Double> reportSentiment, String name)
+   {
+       String[] temp = name.split(" ");
+       for(int i =0;i<firstNames.size(); i++) 
+       {
+           if(firstNames.get(i).equals(temp[0]) && lastNames.get(i).equals(temp[1]))
+           {
+               studentSentiment += reportSentiment.get(i);
+           }
+       }
+       return studentSentiment;
+   }
 }

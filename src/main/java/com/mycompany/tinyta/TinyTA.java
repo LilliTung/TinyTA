@@ -11,8 +11,8 @@ public class TinyTA {
         int numStudents;
         ArrayList<String> reports = new ArrayList<String>();
         ArrayList<Double> reportSentiment = new ArrayList<Double>();
-        ArrayList<String> firstName = new ArrayList<String>();
-        ArrayList<String> lastName = new ArrayList<String>();
+        ArrayList<String> firstNames = new ArrayList<String>();
+        ArrayList<String> lastNames = new ArrayList<String>();
         String temp; 
         
         System.out.println("How many students are in this group?");
@@ -28,9 +28,9 @@ public class TinyTA {
             System.out.println("Last name: ");
             input.next();
             System.out.println("Person Being Evaluated: ");
-            firstName.add(i,Student.getFirstName());
+            firstNames.add(i,Student.getFirstName());
             // get and store student first name
-            lastName.add(i,Student.getLastName());
+            lastNames.add(i,Student.getLastName());
             // get and store student last name
             input.nextLine();
             // clear scanner
@@ -41,9 +41,10 @@ public class TinyTA {
             // get and store report
             System.out.println();
         }
+        
         System.out.println(reports.toString());
-        System.out.println(firstName.toString());
-        System.out.println(lastName.toString());
+        System.out.println(firstNames.toString());
+        System.out.println(lastNames.toString());
         System.out.println(reportSentiment.toString());
         
     }
