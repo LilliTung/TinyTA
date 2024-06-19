@@ -27,6 +27,7 @@ public class Student
     public static double addStudentSentiment(ArrayList<String>firstNames, 
             ArrayList<String>lastNames, ArrayList<Double> reportSentiment, String name)
    {
+       studentSentiment = 0;
        String[] temp = name.split(" ");
        for(int i =0;i<firstNames.size(); i++) 
        {
